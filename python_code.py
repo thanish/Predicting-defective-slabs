@@ -44,8 +44,8 @@ for slab in measurement['SlabID'].unique():
   k = 173
   for i in range(mat_row):
     a = trim_dataset.loc[j:k, ['Value']].values.tolist()
-    a = [item for sub_item in a for item in sub_item]
-    Value = [slab] + [i+1] + a
+    b = [item for sub_item in a for item in sub_item]
+    Value = [slab] + [i+1] + b
     transposed_measure_train.loc[z] = Value
     j = k+1
     k = k+174
@@ -77,8 +77,8 @@ for slab in measurement['SlabID'].unique():
   k = 173
   for i in range(mat_row):
     a = trim_dataset.loc[j:k, ['Value']].values.tolist()
-    a = [item for sub_item in a for item in sub_item]
-    Value = [slab] + [i+1] + a
+    b = [item for sub_item in a for item in sub_item]
+    Value = [slab] + [i+1] + b
     transposed_measure_test.loc[z] = Value
     j = k+1
     k = k+174
